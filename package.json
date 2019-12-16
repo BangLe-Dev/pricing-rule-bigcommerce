@@ -1,0 +1,17 @@
+{
+  "name": "pricing-rule-bigcommerce",
+  "version": "1.0.0",
+  "description": "BangLe",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/webpack/bin/webpack.js --mode production --watch --progress --hide-modules",
+    "build": "node_modules/webpack/bin/webpack.js --mode production --progress --hide-modules"
+  },
+  "author": "BangLe",
+  "license": "ISC",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10"
+  }
+}
