@@ -12,14 +12,14 @@ export class HelperPrice {
 
             // Product show min-max of variant
             if(temp.minmax === true) {
-                result.list = null;
+                delete result.list;
 
                 result.minmax.enable = true;
                 result.minmax.min = temp.min;
                 result.minmax.max = temp.max;
                 result.minmax.title = '';
             } else {
-                result.minmax = null;
+                delete result.minmax;
                 temp = this.ruleShowPrice(product);
 
                 for (let index = 0; index < result.list.length; index++) {
@@ -46,7 +46,7 @@ export class HelperPrice {
     ruleShowMinMax(product: ProductListModel) {
         if (Object.keys(product).length != 0 || product.constructor != Object) {
             let priceBase: number = product.price;
-            let minPrice: number = null;
+            let minPrice: number = -1;
             let maxPrice: number = 0;
             let samePrice: boolean = false;
 
@@ -59,7 +59,7 @@ export class HelperPrice {
                         if(variant.price != null) priceTemp = variant.price;
                         else priceTemp = priceBase;
 
-                        if(minPrice > priceTemp || minPrice === null) minPrice = priceTemp;
+                        if(minPrice > priceTemp || minPrice === -1) minPrice = priceTemp;
                         if(maxPrice < priceTemp) maxPrice = priceTemp;
                     }
                 });
