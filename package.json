@@ -1,7 +1,7 @@
 {
   "name": "pricing-rule-bigcommerce",
   "version": "1.0.0",
-  "description": "BangLe",
+  "description": "package for pricing rule for product list & product detail of E-Bigcommerce",
   "main": "index.js",
   "scripts": {
     "dev": "node_modules/webpack/bin/webpack.js --mode production --watch --progress --hide-modules",
